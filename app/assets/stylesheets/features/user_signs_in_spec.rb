@@ -15,6 +15,7 @@ feature 'user signs in', %Q{
 
     click_button 'Log in'
 
+    expect(page).to have_content('Signed in successfully')
     expect(page).to have_content('Sign Out')
   end
 
@@ -22,7 +23,7 @@ feature 'user signs in', %Q{
     visit new_user_session_path
 
     click_button 'Log in'
-    expect(page).to have_content('Log in')
+    expect(page).to have_content('Invalid Email or password')
     expect(page).to_not have_content('Sign Out')
   end
 end

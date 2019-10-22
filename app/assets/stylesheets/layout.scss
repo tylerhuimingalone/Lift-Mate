@@ -1,0 +1,53 @@
+.top-bar {
+  background-color: #028F76;
+  padding: 0px;
+
+  .layout-title {
+    color: #FFEAAD;
+    margin-left: 10px;
+  }
+
+  h1 {
+    font-family: 'Galada', cursive;
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+
+  li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  ul {
+    background-color: #028F76;
+    margin-right: 10px;
+  }
+
+  .button {
+    background-color: #FFEAAD;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    padding: 0px;
+    border-radius: 10px;
+  }
+
+  a {
+    color: #028F76;
+  }
+}
+
+.background {
+  background-color: #E7FAF1;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 200px;
+}
+
+.flash {
+  font-family: 'Source Sans Pro', sans-serif;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 10px;
+}
