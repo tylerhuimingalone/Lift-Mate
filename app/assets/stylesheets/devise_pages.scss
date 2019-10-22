@@ -1,0 +1,66 @@
+.devise-page {
+  background-color: white;
+  padding: 20px;
+  padding-top: 10px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 30px;
+
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 3em;
+  }
+
+  label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: -25px;
+  }
+
+  .warning {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 2px;
+  }
+
+  .password-label {
+    display: inline-block;
+  }
+
+  #error_explanation h2 {
+    font-size: 2em;
+  }
+
+  .devise-link {
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    padding: 10px;
+    color: #028F76;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .link-container {
+    text-align: right;
+    margin-top: -47px;
+  }
+
+  .main-action {
+    display: inline-block;
+    background-color: #028F76;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFEAAD;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 150px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .long {
+    width: auto;
+  }
+}
