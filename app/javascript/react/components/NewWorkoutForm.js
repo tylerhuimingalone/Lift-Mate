@@ -15,13 +15,21 @@ const NewWorkoutForm = props => {
     })
   }
 
+  let filteredExercises = []
+  const filterExercises = () => {
+    filteredExercises = props.exerciseList.filter((exercise) => {
+      return (props.selectedBodyparts.includes(exercise.bodypart))
+    })
+  }
+
   let exerciseSelects = []
   for (let num = 0; num < props.exerciseNumber; num++) {
+    filterExercises()
     exerciseSelects.push(
       <ExerciseSelectTile
         key={num}
         id={num}
-        exerciseList={props.exerciseList}
+        exerciseList={filteredExercises}
         updateNewWorkout={props.updateNewWorkout}
         newWorkout={props.newWorkout}
       />
