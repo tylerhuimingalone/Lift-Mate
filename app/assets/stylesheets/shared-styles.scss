@@ -1,0 +1,30 @@
+.page {
+  background-color: white;
+  padding: 20px;
+  padding-top: 30px;
+  margin: auto;
+  border-radius: 30px;
+
+  .main-action {
+    display: inline-block;
+    background-color: #028F76;
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFEAAD;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 150px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .long {
+    width: auto;
+  }
+
+  .page-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    font-size: 3em;
+  }
+}
