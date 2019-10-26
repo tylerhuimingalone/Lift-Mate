@@ -10,9 +10,10 @@ RSpec.describe Api::V1::ExercisesController, type: :controller do
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
-      expect(returned_json.length).to eq 6
-      expect(returned_json).to be_kind_of(Array)
-      expect(returned_json[0]["name"]).to eq("push-ups")
+      expect(returned_json.length).to eq 1
+      expect(returned_json).to be_kind_of(Hash)
+      expect(returned_json["exercises"].length).to eq 6
+      expect(returned_json["exercises"][0]["name"]).to eq("push-ups")
     end
   end
 end

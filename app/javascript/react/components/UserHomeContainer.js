@@ -22,8 +22,8 @@ const UserHomeContainer = props => {
   .then(response => response.json())
   .then(body => {
     setUserInfo({
-      firstName: body.first_name,
-      lastName: body.last_name
+      firstName: body.user.first_name,
+      lastName: body.user.last_name
     })
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`))},[])
