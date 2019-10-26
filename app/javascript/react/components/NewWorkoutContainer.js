@@ -25,7 +25,7 @@ const NewWorkoutContainer = props => {
     })
     .then(response => response.json())
     .then(body => {
-      setExerciseList(body)
+      setExerciseList(body.exercises)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])
