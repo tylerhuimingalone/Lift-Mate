@@ -7,6 +7,14 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def authenticate_user!
+    if user_signed_in?
+      super
+    else
+      redirect_to landing_path if request.original_fullpath != landing_path
+    end
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :gender, :email, :password])
     devise_parameter_sanitizer.permit(:sign_in, keys: [:first_name, :last_name, :gender, :email, :password])

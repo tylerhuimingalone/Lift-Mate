@@ -1,0 +1,31 @@
+.landing-page {
+  background: rgba(204, 204, 204, 0.5);
+  width: 900px;
+
+  h3 {
+    padding-top: 30px;
+  }
+
+  .landing-page-title {
+    font-family: 'Galada', cursive;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .screen-shot {
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    height: 300px;
+  }
+
+  i {
+    margin-top: 170px;
+  }
+}

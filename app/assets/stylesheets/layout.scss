@@ -7,17 +7,17 @@
     margin-left: 10px;
   }
 
-  i {
-    color: black;
-    border-bottom: .1em solid #FFEAAD;
-    position: relative;
-    top: -2px;
-  }
-
   h1 {
     font-family: 'Galada', cursive;
     text-decoration: underline;
     margin-left: 10px;
+
+    i {
+      color: black;
+      border-bottom: .1em solid #FFEAAD;
+      position: relative;
+      top: -2px;
+    }
   }
 
   li {
@@ -32,15 +32,19 @@
   }
 
   .button {
-    background-color: #FFEAAD;
+    background-color: #028F76;
     margin-bottom: 0px;
     margin-right: 10px;
     padding: 0px;
-    border-radius: 10px;
   }
 
   a {
-    color: #028F76;
+    color: #FFEAAD;
+  }
+
+  i.fa-2x {
+    color: black;
+    padding-right: 10px;
   }
 }
 
