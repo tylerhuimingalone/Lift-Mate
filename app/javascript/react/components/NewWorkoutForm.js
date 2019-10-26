@@ -43,6 +43,7 @@ const NewWorkoutForm = props => {
           <label>
             Workout Name:
             <input
+              className="workout-name-input"
               type="text"
               name="name"
               value={props.newWorkout.name}
@@ -54,6 +55,7 @@ const NewWorkoutForm = props => {
           <label>
             Number of Exercises:
             <input
+              className="exercise-number-input"
               type="number"
               min="1"
               value={props.exerciseNumber}
