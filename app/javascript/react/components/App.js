@@ -1,7 +1,18 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import UserHomeContainer from './UserHomeContainer'
+import NewWorkoutContainer from './NewWorkoutContainer'
 
 export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={UserHomeContainer} />
+        <Route exact path="/workouts/new" component={NewWorkoutContainer} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App
