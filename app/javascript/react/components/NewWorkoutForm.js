@@ -37,11 +37,11 @@ const NewWorkoutForm = props => {
   }
 
   return (
-    <form>
+    <form onSubmit={props.handleFormSubmission}>
       <div className="grid-x grid-margin-x">
         <div className="cell small-12 medium-6">
           <label>
-            Workout Name
+            Workout Name:
             <input
               type="text"
               name="name"
@@ -52,7 +52,7 @@ const NewWorkoutForm = props => {
         </div>
         <div className="cell small-12 medium-6">
           <label>
-            Number of Exercises
+            Number of Exercises:
             <input
               type="number"
               min="1"
@@ -75,6 +75,11 @@ const NewWorkoutForm = props => {
             Exercises:
             {exerciseSelects}
           </label>
+          <div className="actions">
+            <button type="submit" name="submit" className="main-action">
+              Next Step <i className="fas fa-arrow-alt-circle-right"></i>
+          </button>
+          </div>
         </div>
       </div>
     </form>

@@ -3,6 +3,7 @@ import React from 'react'
 const ExerciseSelectTile = props => {
   const handleWorkoutExerciseChange = event => {
     props.updateNewWorkout({
+      name: props.newWorkout.name,
       exercises: {
         ...props.newWorkout.exercises,
         [event.currentTarget.name]: event.currentTarget.value

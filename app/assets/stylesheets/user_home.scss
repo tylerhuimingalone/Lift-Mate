@@ -3,12 +3,16 @@
 
   .main-call-out {
     background-color: #028F76;
-    padding: 15px;
-    border-radius: 35px;
+    padding: 20px;
+    border-radius: 40px;
     color: #FFEAAD;
-    font-family: 'Galada', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.5em;
     font-weight: bold;
     margin: 50px;
+  }
+
+  .welcome {
+    font-family: 'Galada', cursive;
   }
 }

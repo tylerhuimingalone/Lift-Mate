@@ -1,5 +1,5 @@
 .new-workout-page {
-  max-width: 1200px;
+  max-width: 1500px;
 
   label {
     font-family: 'Source Sans Pro', sans-serif;
@@ -9,13 +9,9 @@
   }
 
   input {
-    border-radius: 10px;
+    border-radius: 20px;
     margin-bottom: 30px;
     text-align: center;
-  }
-
-  .exercises-label {
-    padding: 20px;
   }
 
   .exercise-list {
@@ -27,9 +23,39 @@
     display: none;
   }
 
-  .body-image {
-    height: 200px;
+  .bodypart-list{
+    padding-bottom: 20px;
+  }
+
+  .body-image-container {
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 30px;
+
+    .body-image {
+      height: 200px;
+    }
+
+    .top, .middle {
+      border-bottom: 1px outset grey;
+      width: 75%;
+      margin: auto;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    padding-top: 50px;
+
+    .main-action {
+      font-size: 2em;
+      height: auto;
+      width: 100%;
+
+      i {
+        margin-left: 20px;
+      }
+    }
   }
 }

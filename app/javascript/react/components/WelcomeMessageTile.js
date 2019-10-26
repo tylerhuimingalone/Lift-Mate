@@ -13,7 +13,7 @@ const WelcomeMessageTile = props => {
   }
 
   return (
-    <h2 className="page-title">{message} {props.firstName}</h2>
+    <h2 className="page-title welcome">{message} {props.firstName}</h2>
   )
 }
 

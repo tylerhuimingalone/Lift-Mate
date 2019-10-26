@@ -6,14 +6,14 @@ const BodypartSelectTile = props => {
   }
 
   return (
-    <div>
-      <div id="upper body" className="body-image" onClick={handleBodypartChange}>
+    <div className="body-image-container">
+      <div id="upper body" className="body-image top" onClick={handleBodypartChange}>
         <p>Upper Body</p>
       </div>
-      <div id="core" className="body-image" onClick={handleBodypartChange}>
+      <div id="core" className="body-image middle" onClick={handleBodypartChange}>
         <p>Core</p>
       </div>
-      <div id="lower body" className="body-image" onClick={handleBodypartChange}>
+      <div id="lower body" className="body-image bottom" onClick={handleBodypartChange}>
         <p>Lower Body</p>
       </div>
     </div>
