@@ -23,7 +23,7 @@ feature 'user signs out', %Q{
     expect(page).to have_content('Sign Out')
 
     click_link 'Sign Out'
-    expect(page).to have_content('Log in')
+    expect(page).to have_content('Welcome To')
   end
 
   scenario 'unauthenticated user attempts to sign out' do
