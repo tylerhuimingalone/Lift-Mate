@@ -28,4 +28,35 @@
   i {
     margin-top: 170px;
   }
+
+  .actions {
+    padding-top: 20px;
+
+    .call-to-action {
+      font-size: 2em;
+      font-weight: bold;
+      background-color: #028F76;
+      border-radius: 40px;
+      padding: 10px;
+      color: #FFEAAD;
+      width: 100%;
+    }
+
+    .secondary-action {
+      padding-top: 10px;
+      margin: auto;
+
+      h6 {
+        display: inline-block;
+        font-size: 1.5em;
+      }
+
+      a {
+        padding-left: 3px;
+        display: inline-block;
+        color: #028F76;
+        font-size: 1.5em;
+      }
+    }
+  }
 }

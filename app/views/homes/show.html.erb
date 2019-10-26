@@ -20,4 +20,11 @@
       </div>
     </div>
   </div>
+  <div class="actions text-center grid-x">
+    <%= link_to 'Sign Up', new_user_registration_path, { class: "call-to-action cell small-12" } %>
+    <div class="secondary-action">
+      <h6>Already have an account? </h6>
+      <%= link_to 'Log In', new_user_session_path %>
+    </div>
+  </div>
 </div>
