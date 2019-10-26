@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'homes#index'
+  get '/landing', to: 'homes#show'
   get '/workouts/new', to: 'homes#index'
 
   devise_for :users

@@ -10,22 +10,42 @@
 </head>
 <body>
 
-  <nav class="top-bar">
-    <h1><a href="/" class="layout-title">Lift <i class="fas fa-dumbbell fa-xs"></i> Mate</a></h1>
+  <% if current_user %>
+    <nav class="top-bar">
+      <h1><a href="/" class="layout-title">Lift <i class="fas fa-dumbbell fa-xs"></i> Mate</a></h1>
+      <section class="top-bar-section">
+        <ul class="right dropdown menu" data-dropdown-menu>
+          <li>
+            <i class="fas fa-user-cog fa-2x"></i>
+            <ul class="menu">
+              <li class="button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+              <li class="button"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
 
-    <section class="top-bar-section">
-      <ul class="right menu">
-        <%- if current_user -%>
-          <li class="button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li class="button"><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li class="button"><%= link_to 'Log In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
-  </nav>
+    <div class="background">
 
-  <div class="background">
+  <% else %>
+    <nav class="top-bar no-user-navbar">
+      <h1 class="no-user-layout-title"><a href="/">Lift <i class="fas fa-dumbbell fa-xs"></i> Mate</a></h1>
+      <section class="top-bar-section">
+        <ul class="right dropdown menu" data-dropdown-menu>
+          <li>
+            <i class="fas fa-user fa-2x"></i>
+            <ul class="menu">
+              <li class="button"><%= link_to 'Sign Up', new_user_registration_path %></li>
+              <li class="button"><%= link_to 'Log In', new_user_session_path %></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="no-user-background">
+  <% end %>
 
     <%= yield %>
 
