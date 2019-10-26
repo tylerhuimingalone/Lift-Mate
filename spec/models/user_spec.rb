@@ -12,4 +12,7 @@ RSpec.describe User, type: :model do
 
   it { should have_valid(:password).when("password") }
   it { should_not have_valid(:password).when(nil, "", "word") }
+
+  it { should have_valid(:gender_preference).when("female", "male") }
+  it { should_not have_valid(:gender_preference).when("test") }
 end
