@@ -41,7 +41,7 @@ const NewWorkoutForm = props => {
       <div className="grid-x grid-margin-x">
         <div className="cell small-12 medium-6">
           <label>
-            Workout Name:
+            Workout Name: {props.errors.name}
             <input
               className="workout-name-input"
               type="text"
@@ -53,7 +53,7 @@ const NewWorkoutForm = props => {
         </div>
         <div className="cell small-12 medium-6">
           <label>
-            Number of Exercises:
+            Number of Exercises: {props.errors.exerciseNumber}
             <input
               className="exercise-number-input"
               type="number"
@@ -74,7 +74,7 @@ const NewWorkoutForm = props => {
         </div>
         <div className="cell small-12 medium-6 exercise-list">
           <label className="exercises-label">
-            Exercises:
+            Exercises: {props.errors.exercises}
             {exerciseSelects}
           </label>
           <div className="actions">

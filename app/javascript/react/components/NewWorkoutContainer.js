@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect } from 'react-router-dom'
+import { isEmpty } from 'lodash'
 
 import NewWorkoutForm from './NewWorkoutForm'
 
+// ADD ERROR HANDLING
+
 const NewWorkoutContainer = props => {
   const [shouldRedirect, setShouldRedirect] = useState(false)
+  const [errors, setErrors] = useState({})
   const [exerciseNumber, setExerciseNumber] = useState(0)
   const [exerciseList, setExerciseList] = useState([])
   const [selectedBodyparts, setSelectedBodyparts]  = useState([])
@@ -30,6 +34,30 @@ const NewWorkoutContainer = props => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])
 
+  const validForSubmission = () => {
+    let submitErrors = {}
+    if (newWorkout.name === "") {
+      submitErrors = {
+        ...submitErrors, name: "can't be blank"
+      }
+    }
+
+    if (isEmpty(newWorkout.exercises)) {
+      submitErrors = {
+        ...submitErrors, exercises: "must be selected"
+      }
+    }
+
+    if (exerciseNumber < 1) {
+      submitErrors = {
+        ...submitErrors, exerciseNumber: "must be at least one"
+      }
+    }
+
+    setErrors(submitErrors)
+    return isEmpty(submitErrors)
+  }
+
   const prepareWorkoutData = () => {
     let exerciseArray = []
     const exerciseObject = newWorkout.exercises
@@ -46,30 +74,36 @@ const NewWorkoutContainer = props => {
 
   const handleFormSubmission = () => {
     event.preventDefault()
-    let workoutPayload = prepareWorkoutData()
-    fetch("/api/v1/workouts", {
-      credentials: 'same-origin',
-      method: "POST",
-      body: JSON.stringify(workoutPayload),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        return response
-      } else {
-        const errorMessage = `${response.status} (${response.statusText})`
-        const error = new Error(errorMessage)
-        throw error
-      }
-    })
-    .then(response => response.json())
-    .then(body => {
-      setShouldRedirect(true)
-    })
-    .catch(error => console.error(`Error in fetch: ${error.message}`))
+    if (validForSubmission()) {
+      let workoutPayload = prepareWorkoutData()
+      fetch("/api/v1/workouts", {
+        credentials: 'same-origin',
+        method: "POST",
+        body: JSON.stringify(workoutPayload),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          return response
+        } else {
+          const errorMessage = `${response.status} (${response.statusText})`
+          const error = new Error(errorMessage)
+          throw error
+        }
+      })
+      .then(response => response.json())
+      .then(body => {
+        if (body.id) {
+          setShouldRedirect(true)
+        } else {
+          setErrors(body)
+        }
+      })
+      .catch(error => console.error(`Error in fetch: ${error.message}`))
+    }
   }
 
   const updateExerciseNumber = number => {
@@ -127,6 +161,7 @@ const NewWorkoutContainer = props => {
         updateSelectedBodyparts={updateSelectedBodyparts}
         selectedBodyparts={selectedBodyparts}
         handleFormSubmission={handleFormSubmission}
+        errors={errors}
       />
     </div>
   )
