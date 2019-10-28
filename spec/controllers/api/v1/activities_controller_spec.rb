@@ -36,7 +36,7 @@ RSpec.describe Api::V1::ActivitiesController, type: :controller do
         }
       }
 
-      patch :update, params: activity_update, format: :json
+      patch :bulk_update, params: activity_update, format: :json
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
