@@ -80,7 +80,7 @@ const NewWorkoutForm = props => {
           <div className="actions">
             <button type="submit" name="submit" className="main-action">
               Next Step <i className="fas fa-arrow-alt-circle-right"></i>
-          </button>
+            </button>
           </div>
         </div>
       </div>

@@ -9,24 +9,26 @@ const UserHomeContainer = props => {
     lastName: "",
   })
 
-  useEffect(() => {fetch("/api/v1/users")
-  .then((response) => {
-    if (response.ok) {
-      return response
-    } else {
-      let errorMessage = `${response.status} (${response.statusText})`,
-        error = new Error(errorMessage)
-      throw(error)
-    }
-  })
-  .then(response => response.json())
-  .then(body => {
-    setUserInfo({
-      firstName: body.user.first_name,
-      lastName: body.user.last_name
+  useEffect(() => {
+    fetch("/api/v1/users")
+    .then((response) => {
+      if (response.ok) {
+        return response
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage)
+        throw(error)
+      }
     })
-  })
-  .catch(error => console.error(`Error in fetch: ${error.message}`))},[])
+    .then(response => response.json())
+    .then(body => {
+      setUserInfo({
+        firstName: body.user.first_name,
+        lastName: body.user.last_name
+      })
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
+  },[])
 
   return (
     <div className="user-page page text-center">

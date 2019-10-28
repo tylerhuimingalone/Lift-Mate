@@ -23,6 +23,7 @@ describe("NewWorkoutForm", () => {
         updateSelectedBodyparts={propsFunctionTwo}
         selectedBodyparts={["upper body"]}
         handleFormSubmission={onSubmitMock}
+        errors={{}}
       />
     )
   })
