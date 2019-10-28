@@ -1,3 +1,17 @@
+.no-user-background {
+	background-image: image-url('gym_background.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+	min-width: 100vw;
+	min-height: 100vh;
+	padding-bottom: 30px;
+
+	.spacer {
+		height: 30px;
+		width: 100%;
+	}
+}
+
 .no-user-navbar {
   background: transparent;
   text-align: center;
@@ -5,11 +19,6 @@
 
   ul {
     background: transparent;
-  }
-
-  .fa-2x {
-    color: black;
-    padding-right: 10px;
   }
 
   .no-user-layout-title {
@@ -20,7 +29,7 @@
     display: inline-block;
 
     i {
-      color: black;
+      color: white;
       border-bottom: .1em solid #FFEAAD;
       position: relative;
       top: -2px;
@@ -31,15 +40,14 @@
     position: absolute;
     right: 10px;
   }
+
+	#no-user-icon {
+		color: white;
+		padding-right: 10px;
+	}
 }
 
 .no-user-navbar:hover {
   background-color: #028F76;
-  opacity: .8;
-}
-
-.no-user-background {
-	background-image: image-url('gym.jpg');
-  background-repeat: no-repeat;
-  background-size:cover;
+  opacity: .9;
 }
