@@ -1,14 +1,15 @@
 .landing-page {
   background: rgba(0, 0, 0, 0.5);
-  width: 900px;
+  max-width: 900px;
   padding: 20px;
   padding-top: 30px;
   margin: auto;
   border-radius: 30px;
   color: white;
 
-  h3 {
+  h2 {
     padding-top: 30px;
+    font-weight: bold;
   }
 
   .landing-page-title {
@@ -18,8 +19,9 @@
     font-weight: bold;
   }
 
-  p {
-    text-align: justify;
+  h3 {
+    font-weight: bold;
+    text-align: center;
   }
 
   .screen-shot {
@@ -59,7 +61,7 @@
       a {
         padding-left: 3px;
         display: inline-block;
-        color: #028F76;
+        color: #FFEAAD;
         font-size: 1.5em;
       }
     }
