@@ -4,8 +4,6 @@ import { isEmpty } from 'lodash'
 
 import NewWorkoutForm from './NewWorkoutForm'
 
-// ADD ERROR HANDLING
-
 const NewWorkoutContainer = props => {
   const [shouldRedirect, setShouldRedirect] = useState(false)
   const [errors, setErrors] = useState({})
@@ -17,7 +15,8 @@ const NewWorkoutContainer = props => {
     exercises: {}
   })
 
-  useEffect(() => {fetch("/api/v1/exercises")
+  useEffect(() => {
+    fetch("/api/v1/exercises")
     .then((response) => {
       if (response.ok) {
         return response
@@ -97,7 +96,7 @@ const NewWorkoutContainer = props => {
       .then(response => response.json())
       .then(body => {
         if (body.id) {
-          setShouldRedirect(true)
+          setShouldRedirect(`/workouts/${body.id}/activities/edit`)
         } else {
           setErrors(body)
         }
@@ -146,7 +145,7 @@ const NewWorkoutContainer = props => {
   }
 
   if (shouldRedirect) {
-    return <Redirect to="/" />
+    return <Redirect to={shouldRedirect} />
   }
 
   return (
