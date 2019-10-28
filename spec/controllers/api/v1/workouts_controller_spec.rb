@@ -69,6 +69,19 @@ RSpec.describe Api::V1::WorkoutsController, type: :controller do
 
   describe "GET#show" do
     it "should return an object with the workout information" do
+      user = FactoryBot.create(:user)
+      sign_in user
+      workout = FactoryBot.create(:workout)
+      FactoryBot.create_list(:activity, 5, workout: workout)
+      get :show, params: {id: workout["id"]}
+
+      returned_json = JSON.parse(response.body)
+      expect(response.status).to eq 200
+      expect(response.content_type).to eq("application/json")
+      expect(returned_json.length).to eq 1
+      expect(returned_json).to be_kind_of(Hash)
+      expect(returned_json["workout"]["name"]).to eq(workout.name)
+      expect(returned_json["workout"]["information"].length).to eq 5
     end
   end
 end
