@@ -2,6 +2,10 @@ class Api::V1::WorkoutsController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
   before_action :authenticate_user!
 
+  def show
+    render json: Workout.find(params[:id])
+  end
+
   def create
     user = current_user
     workout = Workout.new(workout_params)

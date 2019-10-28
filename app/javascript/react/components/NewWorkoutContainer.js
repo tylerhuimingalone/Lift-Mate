@@ -95,8 +95,8 @@ const NewWorkoutContainer = props => {
       })
       .then(response => response.json())
       .then(body => {
-        if (body.id) {
-          setShouldRedirect(`/workouts/${body.id}/activities/edit`)
+        if (body.workout.id) {
+          setShouldRedirect(`/workouts/${body.workout.id}/activities/edit`)
         } else {
           setErrors(body)
         }
