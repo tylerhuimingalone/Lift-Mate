@@ -1,5 +1,11 @@
 .devise-page {
-  max-width: 900px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 900px;
+  padding: 20px;
+  padding-top: 30px;
+  margin: auto;
+  border-radius: 30px;
+  color: white;
 
   h2 {
     font-family: 'Source Sans Pro', sans-serif;
@@ -11,6 +17,7 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5em;
     margin-bottom: -25px;
+    color: white;
   }
 
   .warning {
@@ -32,7 +39,7 @@
     margin-bottom: 0px;
     margin-right: 10px;
     padding: 10px;
-    color: #028F76;
+    color: #FFEAAD;
     font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
   }
@@ -40,5 +47,23 @@
   .link-container {
     text-align: right;
     margin-top: -47px;
+  }
+
+  .main-action {
+    display: inline-block;
+    background-color: #028F76;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    color: #FFEAAD;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 150px;
+    height: 44px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .long {
+    width: auto;
   }
 }

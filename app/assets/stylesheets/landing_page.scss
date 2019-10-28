@@ -1,6 +1,11 @@
 .landing-page {
-  background: rgba(204, 204, 204, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   width: 900px;
+  padding: 20px;
+  padding-top: 30px;
+  margin: auto;
+  border-radius: 30px;
+  color: white;
 
   h3 {
     padding-top: 30px;
@@ -19,7 +24,7 @@
 
   .screen-shot {
     margin-top: 50px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 30px;
     padding: 20px;
     height: 300px;

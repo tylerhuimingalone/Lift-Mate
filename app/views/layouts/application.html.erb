@@ -29,22 +29,23 @@
     <div class="background">
 
   <% else %>
-    <nav class="top-bar no-user-navbar">
-      <h1 class="no-user-layout-title"><a href="/">Lift <i class="fas fa-dumbbell fa-xs"></i> Mate</a></h1>
-      <section class="top-bar-section">
-        <ul class="right dropdown menu" data-dropdown-menu>
-          <li>
-            <i class="fas fa-user fa-2x"></i>
-            <ul class="menu">
-              <li class="button"><%= link_to 'Sign Up', new_user_registration_path %></li>
-              <li class="button"><%= link_to 'Log In', new_user_session_path %></li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-    </nav>
-
     <div class="no-user-background">
+      <nav class="top-bar no-user-navbar">
+        <h1 class="no-user-layout-title"><a href="/">Lift <i class="fas fa-dumbbell fa-xs"></i> Mate</a></h1>
+        <section class="top-bar-section">
+          <ul class="right dropdown menu" data-dropdown-menu>
+            <li>
+              <i class="fas fa-user fa-2x" id="no-user-icon"></i>
+              <ul class="menu">
+                <li class="button"><%= link_to 'Sign Up', new_user_registration_path %></li>
+                <li class="button"><%= link_to 'Log In', new_user_session_path %></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+      <div class="spacer">
+      </div>
   <% end %>
 
     <%= yield %>
