@@ -16,9 +16,9 @@ RSpec.describe Api::V1::WorkoutsController, type: :controller do
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
-      expect(returned_json.length).to eq 5
+      expect(returned_json.length).to eq 1
       expect(returned_json).to be_kind_of(Hash)
-      expect(returned_json["name"]).to eq test_Workout[:workout][:name]
+      expect(returned_json["workout"]["name"]).to eq test_Workout[:workout][:name]
       expect(Workout.count).to eq(current_count + 1)
     end
 
@@ -64,6 +64,11 @@ RSpec.describe Api::V1::WorkoutsController, type: :controller do
       expect(Activity.first.workout).to eq(Workout.first)
       expect(Activity.second.workout).to eq(Workout.first)
       expect(Activity.count).to eq(current_count + 2)
+    end
+  end
+
+  describe "GET#show" do
+    it "should return an object with the workout information" do
     end
   end
 end
