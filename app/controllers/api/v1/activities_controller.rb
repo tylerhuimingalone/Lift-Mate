@@ -7,17 +7,21 @@ class Api::V1::ActivitiesController < ApplicationController
     render json: Activity.where(workout: workout)
   end
 
-  def update
-    params.permit!
-    params[:activityInfo].each do |key, value|
+  def bulk_update
+    activity_info.each do |key, value|
       update_activity(key, value)
     end
     render json: { data: "saved" }
   end
 
   private
+
   def update_activity (id, update_hash)
     activity = Activity.find(id)
     activity.update(update_hash)
+  end
+
+  def activity_info
+    params.require(:activityInfo).permit!
   end
 end

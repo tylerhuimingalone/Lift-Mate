@@ -13,4 +13,20 @@ FactoryBot.define do
     name { 'pull-ups' }
     bodypart { 'upper body' }
   end
+
+  factory :workout do
+    name { 'Lift' }
+
+    user
+  end
+
+  factory :activity do
+    reps { '10' }
+    sets { '3' }
+    weight { '20' }
+    unit { 'kg' }
+
+    workout
+    exercise
+  end
 end
