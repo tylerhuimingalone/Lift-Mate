@@ -6,19 +6,19 @@ RSpec.describe Api::V1::WorkoutsController, type: :controller do
       user = FactoryBot.create(:user)
       sign_in user
       current_count = Workout.count
-      test_Workout = {
+      test_workout = {
         workout: { name: "Morning Lift" },
-        exercises: ["squats", "pull-ups"]
+        exercises: ["Squats", "Pull Ups"]
       }
 
-      post :create, params: test_Workout, format: :json
+      post :create, params: test_workout, format: :json
 
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200
       expect(response.content_type).to eq("application/json")
       expect(returned_json.length).to eq 1
       expect(returned_json).to be_kind_of(Hash)
-      expect(returned_json["workout"]["name"]).to eq test_Workout[:workout][:name]
+      expect(returned_json["workout"]["name"]).to eq test_workout[:workout][:name]
       expect(Workout.count).to eq(current_count + 1)
     end
 
@@ -26,12 +26,12 @@ RSpec.describe Api::V1::WorkoutsController, type: :controller do
       user = FactoryBot.create(:user)
       sign_in user
       current_count = Workout.count
-      test_Workout = {
+      test_workout = {
         workout: { name: "" },
-        exercises: ["squats", "pull-ups"]
+        exercises: ["Squats", "Pull Ups"]
       }
 
-      post :create, params: test_Workout, format: :json
+      post :create, params: test_workout, format: :json
 
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200
@@ -44,16 +44,16 @@ RSpec.describe Api::V1::WorkoutsController, type: :controller do
 
     it "should create activities if filled out correctly" do
       user = FactoryBot.create(:user)
-      squats = FactoryBot.create(:exercise, name: 'squats')
-      pull_ups = FactoryBot.create(:exercise)
+      squats = FactoryBot.create(:exercise, name: 'Squats')
+      pull_ups = FactoryBot.create(:exercise, name: 'Pull Ups')
       sign_in user
       current_count = Activity.count
-      test_Workout = {
+      test_workout = {
         workout: { name: "Morning Lift" },
-        exercises: ["squats", "pull-ups"]
+        exercises: ["Squats", "Pull Ups"]
       }
 
-      post :create, params: test_Workout, format: :json
+      post :create, params: test_workout, format: :json
 
       returned_json = JSON.parse(response.body)
       expect(response.status).to eq 200
