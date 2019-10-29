@@ -36,6 +36,7 @@ const UserHomeContainer = props => {
       <Link to="/workouts/new" className="button main-call-out long">Log New Workout</Link>
       <div className="grid-x grid-margin-x">
         <p className="cell small-4"><Link to="/exercises/new">Add Exercise</Link></p>
+        <p className="cell small-4"><Link to="/workouts">View Workouts</Link></p>
       </div>
     </div>
   )

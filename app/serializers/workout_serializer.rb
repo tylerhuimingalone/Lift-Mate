@@ -1,5 +1,5 @@
 class WorkoutSerializer < ActiveModel::Serializer
-  attributes :id, :name, :information
+  attributes :id, :name, :information, :created
 
   def information
     info = []
@@ -13,5 +13,9 @@ class WorkoutSerializer < ActiveModel::Serializer
       })
     end
     info
+  end
+
+  def created
+    object.created_at.strftime("%A, %B %d, %Y")
   end
 end

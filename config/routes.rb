@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'homes#index'
   get '/landing', to: 'homes#show'
+  get '/workouts', to: 'homes#index'
   get '/workouts/new', to: 'homes#index'
   get '/workouts/:id', to: 'homes#index'
   get '/exercises/new', to: 'homes#index'
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index]
-      resources :workouts, only: [:create, :show] do
+      resources :workouts, only: [:index, :create, :show] do
         resources :activities, only: [:index]
       end
       resources :exercises, only: [:index, :create]
