@@ -27,6 +27,26 @@ const WorkoutShowContainer = props => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   },[])
 
+  let messages = ""
+  if (props.match.path.includes("review")) {
+    messages = (
+      <div className="cell">
+        <div className="text-center cell message">
+          <h5><Link to="/workouts">Workouts</Link> | <Link to="/">Home</Link></h5>
+        </div>
+      </div>
+    )
+  } else {
+    messages = (
+      <div className="cell">
+        <h3 className="text-center cell message">Enjoy Your Workout!</h3>
+        <div className="text-center cell message">
+          <h5>Finished your {workout.name}? <Link to="/">Home</Link></h5>
+        </div>
+      </div>
+    )
+  }
+
   const workoutDetails = workout.information.map(info => {
     return (
       <WorkoutDetailTile
@@ -44,10 +64,7 @@ const WorkoutShowContainer = props => {
     <div className="page workout-show-page grid-x grid-margin-x">
       <h1 className="page-title cell">{workout.name}</h1>
       {workoutDetails}
-      <h3 className="text-center cell message">Enjoy Your Workout!</h3>
-      <div className="text-center cell message">
-        <h5>Finished your {workout.name}? <Link to="/">Home</Link></h5>
-      </div>
+      {messages}
     </div>
   )
 }

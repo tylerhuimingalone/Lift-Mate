@@ -35,8 +35,8 @@ const UserHomeContainer = props => {
       <WelcomeMessageTile firstName={userInfo.firstName} />
       <Link to="/workouts/new" className="button main-call-out long">Log New Workout</Link>
       <div className="grid-x grid-margin-x">
-        <p className="cell small-4"><Link to="/exercises/new">Add Exercise</Link></p>
-        <p className="cell small-4"><Link to="/workouts">View Workouts</Link></p>
+        <h5 className="cell small-4"><Link to="/exercises/new">Add Exercise</Link></h5>
+        <h5 className="cell small-4"><Link to="/workouts">View Workouts</Link></h5>
       </div>
     </div>
   )

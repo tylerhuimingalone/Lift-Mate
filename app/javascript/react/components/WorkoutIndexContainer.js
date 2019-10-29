@@ -47,7 +47,7 @@ const WorkoutIndexContainer = props => {
       <div className="cell">
         {workoutTiles}
       </div>
-      <p className="cell"><Link to='/'>Home</Link></p>
+      <h5 className="cell"><Link to='/'>Home</Link></h5>
     </div>
   )
 }
