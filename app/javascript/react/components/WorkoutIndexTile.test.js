@@ -33,7 +33,7 @@ describe("WorkoutIndexTile", () => {
     expect(wrapper.find("h4").text()).toBe('Exercises: 3')
   })
 
-  it("renders a link to the home page", () => {
-    expect(wrapper.find("Link").props()["to"]).toBe('/')
+  it("renders a link to the review page", () => {
+    expect(wrapper.find("Link").props()["to"]).toBe('/workouts/1/review')
   })
 })
