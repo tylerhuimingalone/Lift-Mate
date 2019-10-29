@@ -16,6 +16,7 @@ export const App = (props) => {
         <Route exact path="/workouts" component={WorkoutIndexContainer} />
         <Route exact path="/workouts/new" component={NewWorkoutContainer} />
         <Route exact path="/workouts/:id" component={WorkoutShowContainer} />
+        <Route exact path="/workouts/:id/review" component={WorkoutShowContainer} />
         <Route exact path="/workouts/:id/activities/edit" component={EditActivitiesContainer} />
         <Route exact path="/exercises/new" component={NewExerciseForm} />
       </Switch>
