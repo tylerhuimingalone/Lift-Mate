@@ -4,7 +4,7 @@ class Api::V1::WorkoutsController < ApplicationController
 
   def index
     user = current_user
-    render json: Workout.where(user: user)
+    render json: Workout.where(user: user).order(created_at: :desc)
   end
 
   def show
