@@ -2,6 +2,11 @@ class Api::V1::WorkoutsController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
   before_action :authenticate_user!
 
+  def index
+    user = current_user
+    render json: Workout.where(user: user)
+  end
+
   def show
     render json: Workout.find(params[:id])
   end
