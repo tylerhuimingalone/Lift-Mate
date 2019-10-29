@@ -1,5 +1,5 @@
 class Exercise < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :bodypart, inclusion: { in: ["upper body", "core", "lower body"] }
 
   has_many :activities

@@ -10,7 +10,7 @@ FactoryBot.define do
   end
 
   factory :exercise do
-    name { 'pull-ups' }
+    sequence(:name) {|n| "Pull Ups#{n}" }
     bodypart { 'upper body' }
   end
 
