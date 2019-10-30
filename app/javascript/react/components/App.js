@@ -7,6 +7,7 @@ import EditActivitiesContainer from './EditActivitiesContainer'
 import WorkoutShowContainer from './WorkoutShowContainer'
 import NewExerciseForm from './NewExerciseForm'
 import WorkoutIndexContainer from './WorkoutIndexContainer'
+import WorkoutEditContainer from './WorkoutEditContainer'
 
 export const App = (props) => {
   return (
@@ -17,6 +18,7 @@ export const App = (props) => {
         <Route exact path="/workouts/new" component={NewWorkoutContainer} />
         <Route exact path="/workouts/:id" component={WorkoutShowContainer} />
         <Route exact path="/workouts/:id/review" component={WorkoutShowContainer} />
+        <Route exact path="/workouts/:id/edit" component={WorkoutEditContainer} />
         <Route exact path="/workouts/:id/activities/edit" component={EditActivitiesContainer} />
         <Route exact path="/exercises/new" component={NewExerciseForm} />
       </Switch>
