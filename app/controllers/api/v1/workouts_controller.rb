@@ -38,6 +38,12 @@ class Api::V1::WorkoutsController < ApplicationController
     end
   end
 
+  def destroy
+    workout = Workout.find(params[:id])
+    workout.destroy
+    render json: {}
+  end
+
   private
   def workout_params
     params.require(:workout).permit(:name)

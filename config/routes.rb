@@ -15,10 +15,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index]
-      resources :workouts, only: [:index, :create, :show, :update] do
-        resources :activities, only: [:index]
+      resources :workouts, only: [:index, :create, :show, :update, :destroy] do
+        resources :activities, only: [:index, :create]
       end
       resources :exercises, only: [:index, :create]
+      resources :activities, only: [:update, :destroy]
     end
   end
 end

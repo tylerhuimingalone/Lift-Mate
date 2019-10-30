@@ -1,21 +1,31 @@
 .workout-edit-page {
   label {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     margin: auto;
+    margin-top: 25px;
     margin-bottom: -25px;
     text-align: center;
     max-width: 900px;
 
     h5 {
       display: inline-block;
+      font-weight: bold;
       font-size: 1em;
       color: #028F76;
     }
 
     h5:hover {
       color: #018069;
+    }
+
+    .vertical-line {
+      color: black;
+    }
+
+    .vertical-line:hover {
+      color: black;
     }
   }
 
@@ -34,5 +44,23 @@
 
   .exercise-list {
     padding-top: 30px;
+  }
+
+  #add-activity-label {
+    margin: 0px;
+    text-align: right;
+  }
+
+  .first-option-hidden {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+
+  .first-option-hidden option:first-of-type{
+    display: none;
+  }
+
+  .main-action {
+    margin-top: 5px;
   }
 }

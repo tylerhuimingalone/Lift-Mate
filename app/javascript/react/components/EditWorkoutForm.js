@@ -11,8 +11,10 @@ const EditWorkoutForm = props => {
     <div>
       <div className="grid-x grid-margin-x">
         <div className="cell small-12">
-          <label>Workout Name&nbsp;{props.message}&nbsp;-&nbsp;&nbsp;
+          <label id="workout-name">Workout Name&nbsp;{props.message}&nbsp;|&nbsp;&nbsp;
             <h5 onClick={props.handleSubmission}>Update Name</h5>
+            <h5 className="vertical-line">&nbsp;&nbsp;|&nbsp;&nbsp;</h5>
+            <h5 onClick={props.workoutDestruction}>Delete Workout</h5>
             <input
               type="text"
               name="name"
@@ -24,7 +26,9 @@ const EditWorkoutForm = props => {
         <div className="cell small-12 exercise-list">
           <label>Exercise Details:</label>
           <hr />
-          <ActivityFormContainer />
+          <ActivityFormContainer
+            workoutId={props.workoutId}
+          />
         </div>
       </div>
     </div>
