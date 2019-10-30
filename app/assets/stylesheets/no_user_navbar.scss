@@ -28,12 +28,10 @@
     margin: auto;
     display: inline-block;
 
-    i {
-      color: white;
-      border-bottom: .1em solid #FFEAAD;
-      position: relative;
-      top: -2px;
-    }
+		a:hover {
+	    background: transparent;
+	    color: #FCDF8A;
+	  }
   }
 
   .top-bar-section {
@@ -44,6 +42,10 @@
 	#no-user-icon {
 		color: white;
 		padding-right: 10px;
+	}
+
+	#no-user-icon:hover {
+		color: #A2A2A2;
 	}
 }
 

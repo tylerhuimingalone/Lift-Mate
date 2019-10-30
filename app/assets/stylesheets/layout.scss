@@ -7,17 +7,15 @@
     margin-left: 10px;
   }
 
+  .layout-title:hover {
+    color: #FCDF8A;
+    background-color: #028F76;
+  }
+
   h1 {
     font-family: 'Galada', cursive;
     text-decoration: underline;
     margin-left: 10px;
-
-    i {
-      color: black;
-      border-bottom: .1em solid #FFEAAD;
-      position: relative;
-      top: -2px;
-    }
   }
 
   li {
@@ -42,10 +40,19 @@
     color: #FFEAAD;
   }
 
+  a:hover {
+    background-color: #018069;
+    color: #FCDF8A;
+  }
+
   i.fa-2x {
     color: black;
     padding-right: 10px;
   }
+
+  i:hover {
+		color: #A2A2A2;
+	}
 }
 
 .background {

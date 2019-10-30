@@ -1,9 +1,4 @@
 .workout-index-page {
-  a {
-    color: #028F76;
-    text-align: center;
-  }
-
   #index-hr {
     width: 50%;
   }
@@ -14,11 +9,22 @@
     text-align: center;
     padding-bottom: 5px;
     margin-bottom: 0px;
+    color: #028F76;
+  }
+
+  a:hover {
+    color: #018069;
   }
 
   .workout-tile {
     border-bottom: 2px solid #E7FAF1;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding-top: 10px;
     vertical-align: middle;
+  }
+
+  .workout-tile:hover {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
   }
 }

@@ -5,15 +5,28 @@ const BodypartSelectTile = props => {
     props.updateSelectedBodyparts(event.currentTarget.id)
   }
 
+  let topClass = "body-image top"
+  let middleClass = "body-image middle"
+  let bottomClass = "body-image bottom"
+  if (props.selectedBodyparts.includes("upper body")) {
+    topClass += " selected"
+  }
+  if (props.selectedBodyparts.includes("core")) {
+    middleClass += " selected"
+  }
+  if (props.selectedBodyparts.includes("lower body")) {
+    bottomClass += " selected"
+  }
+
   return (
     <div className="body-image-container">
-      <div id="upper body" className="body-image top" onClick={handleBodypartChange}>
+      <div id="upper body" className={topClass} onClick={handleBodypartChange}>
         <p>Upper Body</p>
       </div>
-      <div id="core" className="body-image middle" onClick={handleBodypartChange}>
+      <div id="core" className={middleClass} onClick={handleBodypartChange}>
         <p>Core</p>
       </div>
-      <div id="lower body" className="body-image bottom" onClick={handleBodypartChange}>
+      <div id="lower body" className={bottomClass} onClick={handleBodypartChange}>
         <p>Lower Body</p>
       </div>
     </div>

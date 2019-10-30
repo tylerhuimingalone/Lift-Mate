@@ -35,10 +35,38 @@
       height: 200px;
     }
 
-    .top, .middle {
+    .top {
       border-bottom: 1px outset grey;
-      width: 75%;
       margin: auto;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+
+    .middle {
+      border-bottom: 1px outset grey;
+      margin: auto;
+    }
+
+    .bottom {
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    .bottom:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .top:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .middle:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .selected {
+      background-color: black;
+      color: white;
     }
   }
 
