@@ -1,0 +1,38 @@
+.workout-edit-page {
+  label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: -25px;
+    text-align: center;
+    max-width: 900px;
+
+    h5 {
+      display: inline-block;
+      font-size: 1em;
+      color: #028F76;
+    }
+
+    h5:hover {
+      color: #018069;
+    }
+  }
+
+  input {
+    text-align: center;
+    font-size: 1em;
+    border-radius: 30px;
+  }
+
+  hr {
+    margin: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+  }
+
+  .exercise-list {
+    padding-top: 30px;
+  }
+}

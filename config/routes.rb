@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/workouts/:id', to: 'homes#index'
   get '/exercises/new', to: 'homes#index'
   get '/workouts/:id/review', to: 'homes#index'
+  get '/workouts/:id/edit', to: 'homes#index'
   get '/workouts/:id/activities/edit', to: 'homes#index'
   patch '/api/v1/activities', to: 'api/v1/activities#bulk_update'
 
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index]
-      resources :workouts, only: [:index, :create, :show] do
+      resources :workouts, only: [:index, :create, :show, :update] do
         resources :activities, only: [:index]
       end
       resources :exercises, only: [:index, :create]

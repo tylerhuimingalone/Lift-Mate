@@ -28,6 +28,16 @@ class Api::V1::WorkoutsController < ApplicationController
     end
   end
 
+  def update
+    workout = Workout.find(params[:id])
+
+    if workout.update(workout_params)
+      render json: workout
+    else
+      render json: workout.errors
+    end
+  end
+
   private
   def workout_params
     params.require(:workout).permit(:name)
