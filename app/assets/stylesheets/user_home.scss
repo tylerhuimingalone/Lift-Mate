@@ -12,6 +12,11 @@
     margin: 50px;
   }
 
+  .main-call-out:hover {
+    background-color: #018069;
+    color: #FCDF8A;
+  }
+
   .welcome {
     font-family: 'Galada', cursive;
   }
@@ -20,6 +25,10 @@
     a {
       color: #028F76;
       font-size: 1.3em;
+    }
+
+    a:hover {
+      color: #018069;
     }
   }
 }

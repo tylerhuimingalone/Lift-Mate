@@ -129,7 +129,7 @@ const NewExerciseForm = props => {
               <button type="submit" className="main-action long">
                 Add to Database
               </button>
-              <p><Link to='/'>Home</Link></p>
+              <h5><Link to='/'>Home</Link></h5>
             </div>
           </div>
         </div>

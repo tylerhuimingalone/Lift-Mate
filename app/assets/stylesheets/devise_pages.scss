@@ -44,6 +44,10 @@
     font-family: 'Source Sans Pro', sans-serif;
   }
 
+  .devise-link:hover {
+    color: #FCDF8A;
+  }
+
   .link-container {
     text-align: right;
     margin-top: -47px;
@@ -61,6 +65,11 @@
     height: 44px;
     font-size: 20px;
     font-weight: bold;
+  }
+
+  .main-action:hover {
+    background-color: #018069;
+    color: #FCDF8A;
   }
 
   .long {

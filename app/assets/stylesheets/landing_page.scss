@@ -49,6 +49,11 @@
       width: 100%;
     }
 
+    .call-to-action:hover {
+      background-color: #018069;
+      color: #FCDF8A;
+    }
+
     .secondary-action {
       padding-top: 10px;
       margin: auto;
@@ -63,6 +68,10 @@
         display: inline-block;
         color: #FFEAAD;
         font-size: 1.5em;
+      }
+
+      a:hover {
+        color: #FCDF8A;
       }
     }
   }
