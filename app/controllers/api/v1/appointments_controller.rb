@@ -7,6 +7,7 @@ class Api::V1::AppointmentsController < ApplicationController
     appointment.user = current_user
 
     if appointment.save
+      SendUserTextReminder.set(wait_until: appointment.time).perform_later(appointment)
       render json: appointment
     else
       render json: appointment.errors
