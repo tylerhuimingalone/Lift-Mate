@@ -9,4 +9,9 @@ class User < ApplicationRecord
   validates :gender_preference, inclusion: { in: ["female", "male"] }
 
   has_many :workouts
+  has_many :appointments
+
+  def number
+    return "+1#{self.phone_number}"
+  end
 end

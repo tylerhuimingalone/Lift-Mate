@@ -37,6 +37,7 @@ const UserHomeContainer = props => {
       <div className="grid-x grid-margin-x">
         <h5 className="cell small-4"><Link to="/exercises/new">Add Exercise</Link></h5>
         <h5 className="cell small-4"><Link to="/workouts">View Workouts</Link></h5>
+        <h5 className="cell small-4"><Link to="/appointments/new">Set Reminder</Link></h5>
       </div>
     </div>
   )
