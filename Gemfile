@@ -57,3 +57,5 @@ gem "active_model_serializers"
 gem 'twilio-ruby'
 gem 'sidekiq'
 gem 'redis'
+gem 'omniauth'
+gem 'omniauth-twitter'
