@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/workouts/:id/activities/edit', to: 'homes#index'
   patch '/api/v1/activities', to: 'api/v1/activities#bulk_update'
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "callbacks" }
 
   namespace :api do
     namespace :v1 do
