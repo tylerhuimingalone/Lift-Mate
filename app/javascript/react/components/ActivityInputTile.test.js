@@ -20,6 +20,6 @@ describe("ActivityInputTile", () => {
   })
 
   it("displays the exercise name", () =>  {
-    expect(wrapper.find("h3").text()).toBe("push-ups")
+    expect(wrapper.find("h4").text()).toBe("push-ups")
   })
 })
