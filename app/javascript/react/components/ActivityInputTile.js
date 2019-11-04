@@ -12,9 +12,9 @@ const ActivityInputTile = props => {
   }
 
   return (
-    <div className="grid-x grid-margin-x">
-      <h3 className="cell small-4 text-center">{props.exercise}</h3>
-      <div className="cell small-2 reps">
+    <div className="five-item-flex-container">
+      <h4 className="flex-item">{props.exercise}</h4>
+      <div className="flex-item reps">
         <input
           name="reps"
           type="number"
@@ -24,7 +24,7 @@ const ActivityInputTile = props => {
         />
       </div>
 
-      <div className="cell small-2 sets">
+      <div className="flex-item sets">
         <input
           name="sets"
           type="number"
@@ -34,7 +34,7 @@ const ActivityInputTile = props => {
         />
       </div>
 
-      <div className="cell small-2 weight">
+      <div className="flex-item weight">
         <input
           name="weight"
           type="number"
@@ -44,7 +44,7 @@ const ActivityInputTile = props => {
         />
       </div>
 
-      <div className="cell small-2 unit">
+      <div className="flex-item unit">
         <select
           name="unit"
           onChange={handleInputChange}

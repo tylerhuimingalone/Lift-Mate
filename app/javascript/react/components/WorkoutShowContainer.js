@@ -67,7 +67,9 @@ const WorkoutShowContainer = props => {
   return (
     <div className="page workout-show-page grid-x grid-margin-x">
       <h1 className="page-title cell">{workout.name}</h1>
-      {workoutDetails}
+      <div className="workout-details-container">
+        {workoutDetails}
+      </div>
       {messages}
     </div>
   )
