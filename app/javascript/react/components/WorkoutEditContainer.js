@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 import EditWorkoutForm from './EditWorkoutForm'
 
@@ -106,6 +106,11 @@ const WorkoutEditContainer = props => {
         message={message}
         workoutDestruction={workoutDestruction}
       />
+    <h5 className="link-home">
+        <Link className="cell" to={`/workouts/${props.match.params.id}/review`}>
+            Back to Workout
+        </Link>
+      </h5>
     </div>
   )
 }

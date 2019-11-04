@@ -16,10 +16,9 @@
       <section class="top-bar-section">
         <ul class="right dropdown menu" data-dropdown-menu>
           <li>
-            <i class="fas fa-user-cog fa-2x"></i>
+            <i class="fas fa-user-cog fa-lg"></i>
             <ul class="menu">
               <li class="button"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-              <li class="button"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
             </ul>
           </li>
         </ul>
@@ -35,7 +34,7 @@
         <section class="top-bar-section">
           <ul class="right dropdown menu" data-dropdown-menu>
             <li>
-              <i class="fas fa-user fa-2x" id="no-user-icon"></i>
+              <i class="fas fa-user fa-lg" id="no-user-icon"></i>
               <ul class="menu">
                 <li class="button"><%= link_to 'Sign Up', new_user_registration_path %></li>
                 <li class="button"><%= link_to 'Log In', new_user_session_path %></li>

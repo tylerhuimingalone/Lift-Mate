@@ -1,9 +1,10 @@
 .page {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   padding-top: 30px;
   margin: auto;
   border-radius: 30px;
+  max-width: 1200px;
 
   .main-action {
     display: inline-block;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import LineChart from './LineChart'
 
@@ -90,7 +91,7 @@ const ExerciseVisualizationContainer = props => {
         </div>
         <div className="cell small-6">
           <label>
-            Compare by:
+            Compare:
           </label>
           <select
             onChange={handleComparisonChange}
@@ -105,6 +106,7 @@ const ExerciseVisualizationContainer = props => {
       </div>
       <hr />
       {chart}
+      <h5><Link to="/">Home</Link></h5>
     </div>
   )
 }

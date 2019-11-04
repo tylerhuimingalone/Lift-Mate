@@ -56,10 +56,13 @@
 }
 
 .background {
-  background-color: #E7FAF1;
+  background: image-url('weights.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+	min-width: 100vw;
+	min-height: 100vh;
   padding-top: 30px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 30px;
-  min-height: 100vh;
 }
