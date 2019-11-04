@@ -88,14 +88,14 @@ const EditActivitiesContainer = props => {
   }
 
   return (
-    <div className="page edit-activities-page">
+    <div className="page" id="edit-activities-page">
       <h2 className="page-title">Add Workout Details</h2>
-      <div className="grid-x grid-margin-x">
-         <h4 className="cell small-4 text-center">Exercises:</h4>
-         <h4 className="cell small-2">Reps:</h4>
-         <h4 className="cell small-2">Sets:</h4>
-         <h4 className="cell small-2">Weight:</h4>
-         <h4 className="cell small-2">Units:</h4>
+      <div className="five-item-flex-container">
+         <h4 className="flex-item">Exercise</h4>
+         <h4 className="flex-item">Reps</h4>
+         <h4 className="flex-item">Sets</h4>
+         <h4 className="flex-item">Weight</h4>
+         <h4 className="flex-item">Units</h4>
       </div>
       <form onSubmit={handleSubmission}>
         <div>

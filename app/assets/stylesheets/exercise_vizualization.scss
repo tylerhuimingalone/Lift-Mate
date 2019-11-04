@@ -3,7 +3,6 @@
   label {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 2em;
-    font-weight: bold;
     margin: auto;
     margin-top: 25px;
     margin-bottom: -10px;
@@ -17,6 +16,7 @@
   select {
     margin-top: 10px;
     font-size: 1.5em;
+    min-height: 47px;
   }
 
   .first-option-hidden option:first-of-type{
@@ -25,5 +25,19 @@
 
   h3 {
     text-align: center;
+  }
+
+  h5 {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 20px;
+
+    a {
+      color: #028F76;
+    }
+
+    a:hover {
+      color: #018069;
+    }
   }
 }

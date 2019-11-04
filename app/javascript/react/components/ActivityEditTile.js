@@ -104,7 +104,6 @@ const ActivityEditTile = props => {
           </select>
         </label>
       </div>
-      <hr />
     </div>
   )
 }

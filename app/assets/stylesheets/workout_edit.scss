@@ -29,6 +29,20 @@
     }
   }
 
+  .link-home {
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 20px;
+
+    a {
+      color: #028F76;
+    }
+
+    a:hover {
+      color: #018069;
+    }
+  }
+
   input {
     text-align: center;
     font-size: 1em;

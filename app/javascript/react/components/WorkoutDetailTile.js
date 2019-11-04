@@ -19,7 +19,7 @@ const WorkoutDetailTile = props => {
 
   const name = capitalize(props.name)
   return (
-    <div className="cell small-6 medium-4 large-3 text-center">
+    <div className="text-center workout-tile">
       <h3>{name}</h3>
       <hr />
       <ul>
