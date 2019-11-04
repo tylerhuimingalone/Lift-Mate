@@ -1,0 +1,29 @@
+.exercise-visualization-page {
+
+  label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: -10px;
+    text-align: center;
+  }
+
+  .exercise-select {
+    text-align: center;
+  }
+
+  select {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+
+  .first-option-hidden option:first-of-type{
+    display: none;
+  }
+
+  h3 {
+    text-align: center;
+  }
+}

@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   get '/workouts', to: 'homes#index'
   get '/workouts/new', to: 'homes#index'
   get '/workouts/:id', to: 'homes#index'
+  get '/exercises', to: 'homes#index'
   get '/exercises/new', to: 'homes#index'
   get '/appointments/new', to: 'homes#index'
-  get '/workouts/:id/review', to: 'homes#index'
   get '/workouts/:id/edit', to: 'homes#index'
+  get '/workouts/:id/review', to: 'homes#index'
   get '/workouts/:id/activities/edit', to: 'homes#index'
   patch '/api/v1/activities', to: 'api/v1/activities#bulk_update'
+  get 'api/v1/exercises/:name/activities/:comparison', to: 'api/v1/activities#graph_data'
 
   devise_for :users, controllers: { omniauth_callbacks: "callbacks" }
 

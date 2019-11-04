@@ -37,6 +37,17 @@ class Api::V1::ActivitiesController < ApplicationController
     render json: { data: "saved" }
   end
 
+  def graph_data
+    params.permit!
+    exercise = Exercise.find_by(name: params[:name])
+    user = current_user
+    workouts = Workout.where(user: user)
+    bulk_activities = Activity.where(exercise: exercise)
+    user_activities = bulk_activities.select{ |activity| workouts.include?(activity.workout)}
+    data_set = form_data_set(user_activities, params[:comparison])
+    render json: data_set
+  end
+
   private
   def activity_params
     params.require(:activity).permit(:reps, :sets, :weight, :unit)
@@ -54,5 +65,22 @@ class Api::V1::ActivitiesController < ApplicationController
 
   def activity_info
     params.require(:activityInfo).permit!
+  end
+
+  def form_data_set(activities, comparison)
+    data_array = [["Date", "#{comparison}"]]
+    activities.each do |activity|
+      date = activity.created_at.strftime("%m/%d/%Y")
+      if comparison == "Total Reps"
+        data_array << [date, activity.sets * activity.reps]
+      elsif comparison == "Sets"
+        data_array << [date, activity.sets]
+      elsif comparison == "Reps per Set"
+        data_array << [date, activity.reps]
+      else
+        data_array << [date, activity.weight]
+      end
+    end
+    data_array
   end
 end
