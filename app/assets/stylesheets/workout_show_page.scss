@@ -9,13 +9,16 @@
     list-style-type: none;
   }
 
-  a {
-    color: #028F76;
-    font-size: 1.3em;
-  }
+  h5{
+    font-size: 1.5em;
+    
+    a {
+      color: #028F76;
+    }
 
-  a:hover {
-    color: #018069;
+    a:hover {
+      color: #018069;
+    }
   }
 
   .message {

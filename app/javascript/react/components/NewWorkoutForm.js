@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import ExerciseSelectTile from './ExerciseSelectTile'
 import BodypartSelectTile from './BodypartSelectTile'
@@ -82,6 +83,7 @@ const NewWorkoutForm = props => {
               Next Step <i className="fas fa-arrow-alt-circle-right"></i>
             </button>
           </div>
+          <h5><Link className="link" to="/exercises/new">Add An Exercise</Link></h5>
         </div>
       </div>
     </form>

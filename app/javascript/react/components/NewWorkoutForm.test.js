@@ -1,5 +1,6 @@
 import React from "react"
 import Enzyme, { mount } from "enzyme"
+import {  BrowserRouter } from "react-router-dom"
 
 import NewWorkoutForm from "./NewWorkoutForm"
 import ExerciseSelectTile from './ExerciseSelectTile'
@@ -14,17 +15,19 @@ describe("NewWorkoutForm", () => {
     propsFunctionOne = jest.fn()
     propsFunctionTwo = jest.fn()
     wrapper = mount(
-      <NewWorkoutForm
-        updateExerciseNumber={onChangeMock}
-        exerciseNumber="1"
-        exerciseList={[{id: 1, name: "sit-ups"}, {id: 2, name: "pull-ups", bodypart: "upper body"}]}
-        updateNewWorkout={propsFunctionOne}
-        newWorkout={{name: "Test Lift", exercises: {}}}
-        updateSelectedBodyparts={propsFunctionTwo}
-        selectedBodyparts={["upper body"]}
-        handleFormSubmission={onSubmitMock}
-        errors={{}}
-      />
+      <BrowserRouter>
+        <NewWorkoutForm
+          updateExerciseNumber={onChangeMock}
+          exerciseNumber="1"
+          exerciseList={[{id: 1, name: "sit-ups"}, {id: 2, name: "pull-ups", bodypart: "upper body"}]}
+          updateNewWorkout={propsFunctionOne}
+          newWorkout={{name: "Test Lift", exercises: {}}}
+          updateSelectedBodyparts={propsFunctionTwo}
+          selectedBodyparts={["upper body"]}
+          handleFormSubmission={onSubmitMock}
+          errors={{}}
+        />
+      </BrowserRouter>
     )
   })
 

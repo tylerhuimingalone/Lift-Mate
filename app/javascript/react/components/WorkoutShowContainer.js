@@ -32,7 +32,11 @@ const WorkoutShowContainer = props => {
     messages = (
       <div className="cell">
         <div className="text-center cell message">
-          <h5><Link to="/workouts">Workouts</Link> | <Link to="/">Home</Link></h5>
+          <h5><Link to="/workouts">Workouts</Link>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <Link to={`/workouts/${props.match.params.id}/edit`}>Edit</Link>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <Link to="/">Home</Link></h5>
         </div>
       </div>
     )
