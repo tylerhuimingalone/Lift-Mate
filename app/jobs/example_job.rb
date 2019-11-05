@@ -1,7 +1,7 @@
 class ExampleJob < ApplicationJob
   queue_as :default
 
-  def perform(string)
-    puts string
+  def perform
+    puts "Test successful"
   end
 end

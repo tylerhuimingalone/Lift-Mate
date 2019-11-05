@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/sinatra/sinatra.git
+  revision: 04a02ac2b7400ab456126dbfce5519cbc200b61a
+  specs:
+    rack-protection (2.0.7)
+      rack
+    sinatra (2.0.7)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.7)
+      tilt (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -126,6 +138,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.13.0)
     multipart-post (2.1.1)
+    mustermann (1.0.3)
     nio4r (2.5.2)
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
@@ -149,8 +162,6 @@ GEM
     public_suffix (4.0.1)
     puma (3.12.1)
     rack (2.0.7)
-    rack-protection (2.0.7)
-      rack
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -290,6 +301,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   shoulda-matchers
   sidekiq
+  sinatra!
   twilio-ruby
   tzinfo-data
   uglifier (>= 1.3.0)
