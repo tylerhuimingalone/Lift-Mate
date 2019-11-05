@@ -80,7 +80,7 @@ const NewExerciseForm = props => {
       .then(body => {
         if (body.exercise) {
           setShouldRerender(shouldRerender + 1)
-          setMessage("Exercise Saved")
+          setMessage(<h5 className="success">Exercise Saved</h5>)
           setNewExercise({
             name: "",
             bodypart: ""
@@ -96,7 +96,7 @@ const NewExerciseForm = props => {
 
   return (
     <div className="page exercise-form-page">
-      <h5>{message}</h5>
+      {message}
       <form className="grid-x grid-margin-x" onSubmit={handleFormSubmission}>
         <div className="cell small-12 medium-8">
           <h2 className="page-title">Add An Exercise</h2>
