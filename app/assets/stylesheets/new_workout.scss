@@ -11,6 +11,11 @@
     border-radius: 20px;
     margin-bottom: 30px;
     text-align: center;
+    font-size: 20px;
+  }
+
+  select {
+    font-size: 20px;
   }
 
   .exercise-list {
@@ -54,16 +59,19 @@
       margin: auto;
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
+      background: rgba(0, 0, 0, 0.4);
     }
 
     .middle {
       border-bottom: 2px solid white;
       margin: auto;
+      background: rgba(0, 0, 0, 0.4);
     }
 
     .bottom {
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
+      background: rgba(0, 0, 0, 0.4);
     }
 
     .bottom:hover {
@@ -79,7 +87,7 @@
     }
 
     .selected {
-      background: rgba(0, 0, 0, 0.4);
+      background: transparent;
       color: white;
     }
   }
