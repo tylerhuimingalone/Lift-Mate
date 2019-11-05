@@ -1,5 +1,5 @@
 Rails.application.configure do
-  ENV["REDISTOGO_URL"] = 'redis://username:password@my.host:6389'
+  ENV["REDISTOGO_URL"] = 'redis://localhost:6379'
 
   uri = URI.parse(ENV["REDISTOGO_URL"])
   REDIS = Redis.new(:url => uri)
