@@ -43,7 +43,7 @@ const AppointmentForm = props => {
   }
 
   return(
-    <div>
+    <div className="text-center appointment-form">
       <form onSubmit={handleSubmission}>
         <h5>Set Reminder Date and Time {errors}</h5>
           <DatePicker
