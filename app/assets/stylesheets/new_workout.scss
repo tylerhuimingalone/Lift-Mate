@@ -1,5 +1,5 @@
 .new-workout-page {
-  
+
   label {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5em;
@@ -26,23 +26,38 @@
     padding-bottom: 20px;
   }
 
+  .female {
+    background: image-url('sara.jpg');
+    background-size:cover;
+  	min-width: 100%;
+  	min-height: 100%;
+  }
+
+  .male {
+    background: image-url('ryan.jpg');
+    background-size:cover;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
   .body-image-container {
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 30px;
+    color: white;
 
     .body-image {
       height: 200px;
     }
 
     .top {
-      border-bottom: 1px outset grey;
+      border-bottom: 2px solid white;
       margin: auto;
       border-top-left-radius: 25px;
       border-top-right-radius: 25px;
     }
 
     .middle {
-      border-bottom: 1px outset grey;
+      border-bottom: 2px solid white;
       margin: auto;
     }
 
@@ -64,8 +79,27 @@
     }
 
     .selected {
-      background-color: black;
+      background: rgba(0, 0, 0, 0.4);
       color: white;
+    }
+  }
+
+  .male-female {
+    padding-top: 5px;
+
+    .button {
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 105px;
+      background-color: #028F76;
+      color: #FFEAAD;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+
+    .button:hover {
+      background-color: #018069;
+      color: #FCDF8A;
     }
   }
 
