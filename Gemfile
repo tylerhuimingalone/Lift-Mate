@@ -55,7 +55,7 @@ gem 'foundation-rails', '~> 6.5'
 gem 'webpacker', '~> 3.3'
 gem "active_model_serializers"
 gem 'twilio-ruby'
-gem 'sidekiq'
+gem 'sidekiq', '5.2.7'
 gem 'redis'
 gem 'omniauth'
 gem 'omniauth-twitter'
