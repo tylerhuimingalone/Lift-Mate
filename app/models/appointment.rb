@@ -3,8 +3,6 @@ class Appointment < ApplicationRecord
 
   belongs_to :user
 
-  after_create :reminder
-
   def reminder
     @twilio_number = ENV['TWILIO_PHONE_NUMBER']
     account_sid = ENV['TWILIO_ACCOUNT_SID']
