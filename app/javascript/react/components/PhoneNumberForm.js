@@ -61,7 +61,7 @@ const PhoneNumberForm = props => {
   }
 
   return (
-    <div>
+    <div className="text-center">
       <h5>Add or Update your Phone Number</h5>
       <form onSubmit={handleSubmission}>
         <input type="text" value={phoneNumber} onChange={handleChange} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import PhoneNumberForm from './PhoneNumberForm'
 import AppointmentForm from './AppointmentForm'
@@ -13,6 +14,7 @@ const NewAppointmentContainer = props => {
       <div className="cell small-6">
         <AppointmentForm />
       </div>
+      <h5><Link to="/">Home</Link></h5>
     </div>
   )
 }
