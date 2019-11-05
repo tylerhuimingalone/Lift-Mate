@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/workouts/:id/edit', to: 'homes#index'
   get '/workouts/:id/review', to: 'homes#index'
   get '/workouts/:id/activities/edit', to: 'homes#index'
+  get '/api/v1/users/gender', to: 'api/v1/users#gender_preference'
+  patch '/api/v1/users/gender', to: 'api/v1/users#update_gender_preference'
   patch '/api/v1/activities', to: 'api/v1/activities#bulk_update'
   get 'api/v1/exercises/:name/activities/:comparison', to: 'api/v1/activities#graph_data'
 

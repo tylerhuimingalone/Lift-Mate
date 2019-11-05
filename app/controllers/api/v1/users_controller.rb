@@ -15,10 +15,25 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def gender_preference
+    user = current_user
+    render json: { view: user.gender_preference }
+  end
+
+  def update_gender_preference
+    user = current_user
+    user.update(gender_params)
+    render json: { view: user.gender_preference }
+  end
+
   private
   def user_params
     phone_number = params.require(:user).permit(:phone_number)
     phone_number["phone_number"].gsub!(/[-.() ]/, "")
     phone_number
+  end
+
+  def gender_params
+    params.require(:user).permit(:gender_preference)
   end
 end
