@@ -355,13 +355,13 @@
 }
 
 :global .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected {
-  background-color: #216ba5;
+  background-color: #028F76;
   color: white;
   font-weight: bold;
 }
 
 :global .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected:hover {
-  background-color: #216ba5;
+  background-color: #028F76;
 }
 
 :global .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--disabled {
@@ -412,7 +412,7 @@
 :global .react-datepicker__quarter--in-selecting-range,
 :global .react-datepicker__quarter--in-range {
   border-radius: 0.3rem;
-  background-color: #216ba5;
+  background-color: #028F76;
   color: #fff;
 }
 
@@ -488,7 +488,7 @@
 :global .react-datepicker__quarter-text--in-selecting-range,
 :global .react-datepicker__quarter-text--in-range {
   border-radius: 0.3rem;
-  background-color: #216ba5;
+  background-color: #028F76;
   color: #fff;
 }
 
@@ -547,7 +547,7 @@
 :global .react-datepicker__quarter-text.react-datepicker__month--in-range:hover,
 :global .react-datepicker__quarter-text.react-datepicker__quarter--selected:hover,
 :global .react-datepicker__quarter-text.react-datepicker__quarter--in-range:hover {
-  background-color: #216ba5;
+  background-color: #028F76;
 }
 
 :global .react-datepicker__month-text:hover,
@@ -690,7 +690,7 @@
 
 :global .react-datepicker__close-icon::after {
   cursor: pointer;
-  background-color: #216ba5;
+  background-color: #028F76;
   color: #fff;
   border-radius: 50%;
   height: 16px;
