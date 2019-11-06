@@ -18,7 +18,7 @@ class User < ApplicationRecord
       user.uid = auth.uid
       user.first_name = auth.info.name.split[0]
       user.last_name = auth.info.name.split[1]
-      user.email = "#{auth.info.nickname}@test.com"
+      user.email = "#{auth.info.nickname}@twitter"
       user.password = Devise.friendly_token[0,20]
     end
   end

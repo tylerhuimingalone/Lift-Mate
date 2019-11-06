@@ -6,7 +6,8 @@ import WorkoutDetailTile from './WorkoutDetailTile'
 const WorkoutShowContainer = props => {
   const [workout, setWorkout] = useState({
     name: "",
-    information: []
+    information: [],
+    user: {}
   })
 
   useEffect(() => {
@@ -51,6 +52,15 @@ const WorkoutShowContainer = props => {
     )
   }
 
+  let tweetLink = ""
+  if (workout.user.provider === "twitter") {
+    tweetLink = (
+      <h5 className="tweet-link">
+        <Link to={`/workouts/${props.match.params.id}/tweet`}>Tweet</Link>
+      </h5>
+    )
+  }
+
   const workoutDetails = workout.information.map(info => {
     return (
       <WorkoutDetailTile
@@ -70,6 +80,7 @@ const WorkoutShowContainer = props => {
       <div className="workout-details-container">
         {workoutDetails}
       </div>
+      {tweetLink}
       {messages}
     </div>
   )
