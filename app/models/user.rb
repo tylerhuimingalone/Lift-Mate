@@ -12,14 +12,19 @@ class User < ApplicationRecord
   has_many :workouts
   has_many :appointments
 
+  has_one_attached :tweet_image
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.first_name = auth.info.name.split[0]
       user.last_name = auth.info.name.split[1]
-      user.email = "#{auth.info.nickname}@test.com"
+      user.email = "#{auth.info.nickname}@twitter"
       user.password = Devise.friendly_token[0,20]
+      user.key = auth.extra.access_token.consumer.key
+      user.token = auth.credentials.token
+      user.secret = auth.credentials.secret
     end
   end
 

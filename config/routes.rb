@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/appointments/new', to: 'homes#index'
   get '/workouts/:id/edit', to: 'homes#index'
   get '/workouts/:id/review', to: 'homes#index'
+  get '/workouts/:id/tweet', to: 'homes#index'
   get '/workouts/:id/activities/edit', to: 'homes#index'
   get '/api/v1/users/gender', to: 'api/v1/users#gender_preference'
   patch '/api/v1/users/gender', to: 'api/v1/users#update_gender_preference'
@@ -28,7 +29,8 @@ Rails.application.routes.draw do
       end
       resources :exercises, only: [:index, :create]
       resources :activities, only: [:update, :destroy]
-      resource :appointments, only: [:create]
+      resources :appointments, only: [:create]
+      resources :tweets, only: [:create]
     end
   end
 end

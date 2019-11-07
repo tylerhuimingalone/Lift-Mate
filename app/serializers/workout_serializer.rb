@@ -1,5 +1,5 @@
 class WorkoutSerializer < ActiveModel::Serializer
-  attributes :id, :name, :information, :created
+  attributes :id, :name, :information, :created, :user
 
   def information
     info = []
