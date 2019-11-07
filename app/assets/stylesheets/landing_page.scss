@@ -1,6 +1,6 @@
 .landing-page {
   background: rgba(0, 0, 0, 0.5);
-  max-width: 900px;
+  max-width: 1200px;
   padding: 20px;
   padding-top: 30px;
   margin: auto;
@@ -24,12 +24,37 @@
     text-align: center;
   }
 
+  h4 {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: -40px;
+  }
+
   .screen-shot {
     margin-top: 50px;
     border: 2px solid white;
     border-radius: 30px;
-    padding: 20px;
+    width: 100%;
     height: 300px;
+    overflow: hidden;
+  }
+
+  .summary {
+    background: image-url('workout_summary.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+  	max-width: 100%;
+    height: 100%;
+    background-position: center;
+  }
+
+  .progress {
+    background: image-url('progress_chart.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+  	max-width: 100%;
+  	height: 100%;
+    background-position: center;
   }
 
   i {
