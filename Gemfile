@@ -61,3 +61,4 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'sinatra', github: 'sinatra/sinatra'
 gem "aws-sdk-s3", require: false
+gem "twitter"

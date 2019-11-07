@@ -30,11 +30,7 @@ Rails.application.routes.draw do
       resources :exercises, only: [:index, :create]
       resources :activities, only: [:update, :destroy]
       resources :appointments, only: [:create]
-      resources :tweets, only: [:create] do
-        collection do
-          post :add_image
-        end
-      end
+      resources :tweets, only: [:create]
     end
   end
 end
