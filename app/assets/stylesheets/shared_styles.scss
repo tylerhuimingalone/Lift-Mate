@@ -44,6 +44,10 @@ button:focus {
   outline: 0;
 }
 
+p:focus {
+  outline: 0;
+}
+
 input:focus, textarea:focus {
   outline-color: #028F76;
 }
