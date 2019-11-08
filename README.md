@@ -13,19 +13,19 @@ password: LiftmateApp1!
  ```
 
 ## Technologies
-Ruby - 2.6.5
-Rails - 5.2.3
-React - 16.8.0
-Foundation Rails - 6.5.3.0
-Twilio-Ruby
-Sidekiq - 5.2.7
-Redis
-Omniauth
-Omniauth-Twitter
-Twitter
-React-google-charts - 3.0.6
-React-dropzone - 10.1.10
-React-datepicker - 2.9.6
+- Ruby - 2.6.5
+- Rails - 5.2.3
+- React - 16.8.0
+- Foundation Rails - 6.5.3.0
+- Twilio-Ruby
+- Sidekiq - 5.2.7
+- Redis
+- Omniauth
+- Omniauth-Twitter
+- Twitter gem
+- React-google-charts - 3.0.6
+- React-dropzone - 10.1.10
+- React-datepicker - 2.9.6
 
 ## To Run Locally
 Download the Repo
