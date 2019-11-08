@@ -80,7 +80,10 @@ const UserTweetForm = props => {
             onChange={handleChange}
           />
         </div>
-        <button className="main-action" type="submit">Post Tweet</button>
+        <button className="twitter-button" type="submit">
+          <h5 className="twitter-link">Post Tweet</h5>
+          <i className="fab fa-twitter"></i>
+        </button>
       </form>
     </div>
   )

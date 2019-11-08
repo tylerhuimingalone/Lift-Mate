@@ -1,0 +1,59 @@
+.tweet-page {
+
+  .twitter-button {
+    padding: 0px 15px;
+    background-color: #1DA1F2;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 15px;
+
+    .twitter-link {
+      color: white;
+      font-family: 'Source Sans Pro', sans-serif;
+      display: inline-block;
+      font-size: 1.7em;
+    }
+
+    .fa-twitter {
+      margin-left: 10px;
+      color: white;
+      display: inline-block;
+    }
+  }
+
+  .twitter-button:hover {
+    background-color: #1B91D9;
+  }
+
+  label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  p {
+    height: 39px;
+    margin-bottom: 0px;
+    border: 1px solid #cacaca;
+    border-radius: 30px;
+    vertical-align: middle;
+    font-size: 20px;
+  }
+
+  input {
+    border-radius: 30px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  div:focus {
+    outline: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}

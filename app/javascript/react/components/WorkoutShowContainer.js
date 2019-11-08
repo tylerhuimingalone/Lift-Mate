@@ -55,9 +55,10 @@ const WorkoutShowContainer = props => {
   let tweetLink = ""
   if (workout.user.provider === "twitter") {
     tweetLink = (
-      <h5 className="tweet-link">
-        <Link to={`/workouts/${props.match.params.id}/tweet`}>Tweet</Link>
-      </h5>
+      <Link to={`/workouts/${props.match.params.id}/tweet`} className="twitter-button">
+        <h5 className="twitter-link">Tweet</h5>
+        <i className="fab fa-twitter"></i>
+      </Link>
     )
   }
 

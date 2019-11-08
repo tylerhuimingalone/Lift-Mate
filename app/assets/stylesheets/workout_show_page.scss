@@ -21,6 +21,30 @@
     }
   }
 
+  .twitter-button {
+    padding: 0px 15px;
+    background-color: #1DA1F2;
+    border-radius: 30px;
+    margin: auto;
+
+    .twitter-link {
+      color: white;
+      font-family: 'Source Sans Pro', sans-serif;
+      display: inline-block;
+      font-size: 1.7em;
+    }
+
+    .fa-twitter {
+      margin-left: 10px;
+      color: white;
+      display: inline-block;
+    }
+  }
+
+  .twitter-button:hover {
+    background-color: #1B91D9;
+  }
+
   .message {
     padding-top: 20px;
   }

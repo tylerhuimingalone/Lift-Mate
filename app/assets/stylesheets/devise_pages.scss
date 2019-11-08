@@ -48,6 +48,29 @@
     color: #FCDF8A;
   }
 
+  .twitter-button {
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    padding: 5px 10px;
+    background-color: #1DA1F2;
+    border-radius: 25px;
+
+    .twitter-link {
+      color: white;
+      font-size: 20px;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .fa-twitter {
+      margin-left: 5px;
+    }
+  }
+
+  .twitter-button:hover {
+    background-color: #1B91D9;
+  }
+
   .link-container {
     text-align: right;
   }
